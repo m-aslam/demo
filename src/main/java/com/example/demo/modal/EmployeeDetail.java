@@ -7,10 +7,6 @@ import java.io.Serializable;
 @Table(name = "employee_detail")
 public class EmployeeDetail implements Serializable {
 
-    @Id
-    @Column(name = "employee_id")
-    private Long employeeId;
-
     @Column(name = "manager_name")
     private String manager_name;
 

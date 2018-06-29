@@ -10,7 +10,6 @@ public class Employee implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "employee_id")
     private Long employeeId;
 
     @Column(name = "name")
