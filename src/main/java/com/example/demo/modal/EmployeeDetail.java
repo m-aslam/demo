@@ -7,6 +7,10 @@ import java.io.Serializable;
 @Table(name = "employee_detail")
 public class EmployeeDetail implements Serializable {
 
+    @Id
+    @Column(name = "employee_id")
+    private Long employeeId;
+
     @Column(name = "manager_name")
     private String manager_name;
 
@@ -14,12 +18,18 @@ public class EmployeeDetail implements Serializable {
     private String project;
 
     @Id
-    @OneToOne()
+    @OneToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
 
+
     public EmployeeDetail() {
+    }
+
+    public EmployeeDetail(String manager_name, String project) {
+        this.manager_name = manager_name;
+        this.project = project;
     }
 
     public String getManager_name() {

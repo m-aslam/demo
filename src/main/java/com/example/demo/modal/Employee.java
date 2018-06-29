@@ -19,6 +19,18 @@ public class Employee implements Serializable {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "employee")
     private EmployeeDetail employeeDetail;
 
+    public Employee() {
+    }
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public Employee(String name, EmployeeDetail employeeDetail) {
+        this.name = name;
+        this.employeeDetail = employeeDetail;
+    }
+
     public Long getEmployeeId() {
         return employeeId;
     }
