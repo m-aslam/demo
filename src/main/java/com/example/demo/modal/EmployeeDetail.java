@@ -7,20 +7,15 @@ import java.io.Serializable;
 @Table(name = "employee_detail")
 public class EmployeeDetail implements Serializable {
 
-    @Column(name = "manager_name")
     private String manager_name;
-
-    @Column(name = "project")
     private String project;
-
-    @Id
-    @OneToOne
-    @JoinColumn(name = "employee_id")
     private Employee employee;
 
-
-
     public EmployeeDetail() {
+    }
+
+    public EmployeeDetail(Employee employee) {
+        this.employee = employee;
     }
 
     public EmployeeDetail(String manager_name, String project) {
@@ -35,7 +30,6 @@ public class EmployeeDetail implements Serializable {
     public void setManager_name(String manager_name) {
         this.manager_name = manager_name;
     }
-
     public String getProject() {
         return project;
     }
@@ -44,6 +38,9 @@ public class EmployeeDetail implements Serializable {
         this.project = project;
     }
 
+    @Id
+    @OneToOne
+    @JoinColumn(name = "employee_id")
     public Employee getEmployee() {
         return employee;
     }

@@ -26,6 +26,7 @@ public class DemoApplication implements CommandLineRunner {
         EmployeeDetail employeeDetail = new EmployeeDetail();
         employeeDetail.setManager_name("Zeeshan");
         employeeDetail.setProject("PNT");
+        employeeDetail.setEmployee(employee);
 
         employee.setEmployeeDetail(employeeDetail);
 

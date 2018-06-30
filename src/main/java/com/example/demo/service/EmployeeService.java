@@ -11,8 +11,8 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public Employee getEmployeeBtId(Long id){
-        return employeeRepository.findByEmployeeId(id);
-    }
+//    public Employee getEmployeeBtId(Long id){
+//        return employeeRepository.findEmployeeByEmployee_id(id);
+//    }
 
 }
